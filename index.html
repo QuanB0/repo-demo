@@ -3,3 +3,9 @@
 <div>World</div>
 
 
+test('should render the index.html', async () => {
+  const { getByText } = render(<App />);
+  expect(getByText('Hello')).toBeInTheDocument();
+  expect(getByText('World')).toBeInTheDocument();
+});
+
